@@ -18,11 +18,11 @@ const putRequest = (url: string) => {
 }
 
 export const turnOnRequest = (deviceId: string) => {
-    putRequest(`${process.env.NEXT_PUBLIC_API_HOST_URL}devices/active/${deviceId}`)
+    putRequest(`${process.env.NEXT_PUBLIC_API_HOST_URL}/devices/active/${deviceId}`)
 }
 
 export const turnOffRequest = (deviceId: string) => {
-    putRequest(`${process.env.NEXT_PUBLIC_API_HOST_URL}devices/inactive/${deviceId}`)
+    putRequest(`${process.env.NEXT_PUBLIC_API_HOST_URL}/devices/inactive/${deviceId}`)
 }
 
 const postRequest = (url: string, data: any) => {
@@ -30,5 +30,5 @@ const postRequest = (url: string, data: any) => {
 }
 
 export const addNewDeviceRequest = (data: any) => {
-    postRequest(`${process.env.NEXT_PUBLIC_API_HOST_URL}devices`, data)
+    postRequest(`${process.env.NEXT_PUBLIC_API_HOST_URL}/devices`, data)
 }
